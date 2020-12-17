@@ -1,0 +1,134 @@
+133
+increases^expression	0
+decreases^expression	1
+marker/mechanis	2
+affects^expression	3
+increases^secretion	4
+increases^methylation	5
+decreases^methylation	6
+affects^methylation	7
+decreases^response to substance	8
+affects^reaction	9
+decreases^activity	10
+therapeuti	11
+affects^cotreatment	12
+affects^secretion	13
+decreases^secretion	14
+increases^mutagenesis	15
+increases^reaction	16
+increases^abundance	17
+decreases^reaction	18
+increases^activity	19
+affects^splicing	20
+increases^cleavage	21
+increases^metabolic processing	22
+increases^localization	23
+affects^binding	24
+increases^phosphorylation	25
+decreases^phosphorylation	26
+affects^localization	27
+increases^chemical synthesis	28
+affects^response to substance	29
+increases^stability	30
+increases^uptake	31
+increases^oxidation	32
+increases^O-linked glycosylation	33
+increases^response to substance	34
+increases^reduction	35
+decreases^chemical synthesis	36
+affects^phosphorylation	37
+increases^degradation	38
+increases^ADP-ribosylation	39
+decreases^cleavage	40
+affects^activity	41
+increases^hydroxylation	42
+affects^export	43
+affects^abundance	44
+affects^chemical synthesis	45
+affects^metabolic processing	46
+decreases^degradation	47
+affects^folding	48
+decreases^stability	49
+decreases^abundance	50
+decreases^transport	51
+increases^export	52
+affects^transport	53
+increases^acetylation	54
+decreases^localization	55
+decreases^acetylation	56
+decreases^metabolic processing	57
+decreases^glutathionylation	58
+increases^glutathionylation	59
+increases^sulfation	60
+increases^glucuronidation	61
+increases^transport	62
+decreases^exp	63
+decreases^ubiquitination	64
+decreases^uptake	65
+increases^splicing	66
+increases^ubiquitination	67
+increases^import	68
+decreases^sumoylation	69
+increases^hydrolysis	70
+affects^uptake	71
+affects^oxidation	72
+decreases^alkylation	73
+decreases^splicing	74
+affects^import	75
+affects^cleavage	76
+increases^sumoylation	77
+affects^mutagenesis	78
+increases^nitrosation	79
+decreases^export	80
+affects^acetylation	81
+affects^degradation	82
+affects^hydrolysis	83
+decreases^nitrosation	84
+decreases^oxidation	85
+decreases^hydroxylation	86
+decreases^glycosylation	87
+decreases^N-linked glycosylation	88
+affects^hydroxylation	89
+affects^reduction	90
+affects^glucuronidation	91
+decreases^prenylation	92
+decreases^farnesylation	93
+increases^alkylation	94
+increases^lipidation	95
+decreases^mutagenesis	96
+decreases^amination	97
+increases^folding	98
+affects^stability	99
+decreases^import	100
+increases^prenylation	101
+decreases^lipidation	102
+decreases^geranoylation	103
+decreases^reduction	104
+decreases^hydrolysis	105
+affects^ubiquitination	106
+affects^glutathionylation	107
+affects^sulfation	108
+decreases^ethylation	109
+affects^farnesylation	110
+increases^acylation	111
+decreases^palmitoylation	112
+decreases^folding	113
+increases^glycosylation	114
+affects^glycosylation	115
+increases^glycation	116
+decreases^carboxylation	117
+affects^alkylation	118
+affects^sumoylation	119
+decreases^sulfation	120
+increases^carboxylation	121
+increases^N-linked glycosylation	122
+decreases^glucuronidation	123
+increases^farnesylation	124
+decreases^carbamoylation	125
+affects^N-linked glycosylation	126
+increases^carbamoylation	127
+decreases^glycation	128
+increases^ribosylation	129
+decreases^acylation	130
+decreases^ADP-ribosylation	131
+decreases^O-linked glycosylation	132

@@ -1,0 +1,13 @@
+PubTator (annoting pubmed articles)
+https://academic.oup.com/nar/article/47/W1/W587/5494727 
+
+https://www.ncbi.nlm.nih.gov/research/pubtator/  
+
+sample annotated abstract
+https://www.ncbi.nlm.nih.gov/research/pubtator-api/publications/export/pubtator?pmids=26739349,28483577
+
+Sample annotated pubmed full text
+https://www.ncbi.nlm.nih.gov/research/pubtator-api/publications/export/biocxml?pmcids=PMC4743391    
+
+Entities relations
+http://ctdbase.org/about/
