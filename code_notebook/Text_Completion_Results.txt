@@ -1,4 +1,4 @@
-Till 2000
+Using dataset with papers published till 2000
 
 
 Alzheimer's disease is caused by a highly selective neurodegenerative process. Therefore, the mechanism of amyloid deposition and progression  is a multifaceted, multi-system biology.
@@ -68,7 +68,7 @@ The use of a validated test battery to measure the performance of young adults i
 
 
 
-TILL 2010
+Using dataset with papers published till 2010
 
 
 Alzheimer's disease is caused by mutations in the presenilin-1 gene. We have shown previously that the presenilin 1 gene is present in the brain of a transgenic mouse expressing AD-associated amyloid beta (Abeta) plaques. We have now shown that the presenilin 1 gene is associated with neurotrophic  and neuroprotective effects in  a transgenic mouse model of AD. We have also shown that presenilin 1 gene expression is associated with a reduction in the levels of cytokines and proinflammatory cytokines in AD brains. Our results provide a novel mechanism by which presenilin 1 gene expression might mediate neurotrophic and neuroprotective effects of Abeta peptide.
@@ -134,7 +134,7 @@ Oxidative stress is involved in the pathogenesis of Alzheimer's disease (AD). Re
 
 
 
-TILL 2020
+Using dataset with papers published till 2020
 
 
 Alzheimer's disease is caused by an imbalance between  synaptic and cholinergic precursors. We have previously shown that the density of the cholinergic precursors is reduced in the hippocampus of mice suffering from AD (p = 0.04). Here, we investigated the effects of apolipoprotein E (apoE) on the hippocampal cholinergic precursors by binding them with the PG-2A2-R yamikit, an apolipoprotein E (apoE)-deficient mouse model. The interaction of apoE with the PG-2A2-R yamikit reduced the volume of the hippocampal cholinergic precursors (p = 0.04) and the  dentate gyrus (p = 0.04) in the mouse model, and induced a decrease in the density of the hippocampal cholinergic precursors (p < 0.05). These results revealed that apoE-mediated cholinergic dysfunction in the hippocampus is caused by an imbalance between the cholinergic precursors and the PG-2A2-R yamikit. In addition, apoE-mediated cholinergic dysfunction in the hippocampal cholinergic precurs
