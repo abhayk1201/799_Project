@@ -1,0 +1,19 @@
+sudo apt-get install fenics
+! pip3 install fenics-ffc --upgrade
+
+https://bitbucket.org/fenics-project/mshr/src/master/demo/python/
+!conda install -c conda-forge mshr
+
+
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:fenics-packages/fenics
+sudo apt-get update
+sudo apt-get install --no-install-recommends fenics
+
+
+
+
+
+! pip install torch_sparse
+! pip install torch_scatter
+! pip install torchdiffeq
