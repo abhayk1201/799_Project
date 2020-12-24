@@ -39,12 +39,12 @@ args = Config(
     batch_size=None,  # Use None for full batch
     lr=0.000001,
     epochs=1000,
-    model_path="./model_gnode_n3000_run_euler_1.pth",
-    data_path="../data/subs_paper/convdiff_2pi_n3000_t21_train/",
-    tb_log_dir="./tb_logs_dec12_n3000/",
+    model_path="./model_covid_state_daily.pth",
+    data_path="../data/covid_state_daily_train/",
+    tb_log_dir="./tmp_logs_covid/",
 )
 
-n_s = 24
+n_s = 1
 
 print("NUMBER OF RANDOM SIMULATIONS :", n_s)
 
@@ -80,7 +80,7 @@ data = utils.read_pickle(['t', 'x', 'u'], args.data_path)
 dataset = utils.generate_torchgeom_dataset(data, sig=0.0)
 
 # #########
-sim_inds = np.random.choice(len(dataset), n_s, replace=False)
+sim_inds = [0] #np.random.choice(len(dataset), n_s, replace=False)
 print(f'sim_inds = {sim_inds}')
 dataset = [ds for i, ds in enumerate(dataset) if i in sim_inds]
 print(f'dataset length: {len(dataset)}')
@@ -97,7 +97,8 @@ loss_fn = nn.MSELoss()
 
 # Training
 ts = dataset[0].t.shape[0]  # assumes the same time grid for all sim-s.
-print(dataset[0].t)
+print("%%%%%%%%%%%%%%%%%%")
+print(dataset[0])
 for epoch in range(args.epochs):
     losses = torch.zeros(len(loader))
     
@@ -152,7 +153,7 @@ utils.plot_fields(
         "y_pd": y_pd.cpu().detach().numpy(),
         "y_gt": dp.y.numpy(),
     },
-    save_path="./tmp_figs_dec12_n3000/",
+    save_path="./tmp_covid_state_daily/",
     delay=0.0001,
 )
 plt.show()
