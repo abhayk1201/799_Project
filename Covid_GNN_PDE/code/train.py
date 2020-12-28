@@ -38,9 +38,9 @@ args = Config(
     device="cpu", #CHANGE cuda
     batch_size=None,  # Use None for full batch
     lr=0.000001,
-    epochs=1000,
-    model_path="./model_covid_state_daily.pth",
-    data_path="../data/covid_state_daily_train/",
+    epochs=10000,
+    model_path="./model_covid_state_daily_norm_10k.pth",
+    data_path="../data/covid_state_daily_norm_train/",
     tb_log_dir="./tmp_logs_covid/",
 )
 
@@ -153,7 +153,7 @@ utils.plot_fields(
         "y_pd": y_pd.cpu().detach().numpy(),
         "y_gt": dp.y.numpy(),
     },
-    save_path="./tmp_covid_state_daily/",
+    save_path="./tmp_covid_state_daily_norm_10k/",
     delay=0.0001,
 )
 plt.show()

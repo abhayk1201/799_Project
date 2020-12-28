@@ -29,12 +29,12 @@ args = Config(
     d=40,
     hs_1=60,
     hs_2=0,
-    method="adams",
+    method="euler",
     rtol=1.0e-7,
     atol=1.0e-7,
     device="cuda",
-    model_path="./model_gnode_n3000_run_4.pth",
-    data_path="../data/subs_paper/convdiff_2pi_n3000_t21_test/",
+    model_path="./model_covid_state_daily_norm.pth",
+    data_path="../data/covid_state_daily_norm_test/",
 )
 
 device = torch.device(args.device)
@@ -82,7 +82,7 @@ loss_fn = nn.MSELoss()
 diffs_over_time = []
 losses = torch.zeros(len(loader))
 
-inds_of_sims_to_show = set([])
+inds_of_sims_to_show = set([0])
 
 for i, dp in enumerate(loader):
     params_dict = {"edge_index": dp.edge_index.to(device), "pos": dp.pos.to(device)}
@@ -90,6 +90,8 @@ for i, dp in enumerate(loader):
 
     y0 = dp.x.to(device)
     t = dp.t.to(device)
+    np.savetxt('data_t_1.txt', dp.t.cpu().detach().numpy())
+    np.savetxt('data_pos_1.txt', dataset[i].pos.cpu().detach().numpy())
     y_pd = adj_integr.integrate(
         F, y0, t, method=args.method, rtol=args.rtol, atol=args.atol)
     
@@ -101,6 +103,10 @@ for i, dp in enumerate(loader):
 
     u = y_gt.cpu().detach().numpy()
     u_pd = y_pd.cpu().detach().numpy()
+    print(u_pd[:, :, 0].shape)
+    print(u[:, :, 0].shape)
+    np.savetxt('u_pred_1.txt', u_pd[:, :, 0])
+    np.savetxt('u_gt_1.txt', u[:, :, 0])
     u_mean = u.mean(axis=1).reshape(-1)
 
     # diffs = [((u[i] - u_pd[i])**2).mean() for i in range(len(u))]
@@ -109,11 +115,12 @@ for i, dp in enumerate(loader):
     diffs = [np.linalg.norm(u[i].reshape(-1) - u_pd[i].reshape(-1)) / (np.linalg.norm(u[i].reshape(-1)) + eps) for i in range(len(u))]
     
     diffs_over_time.append(diffs)
-
+    print(i)
     print("test case {:>5d} | test loss: {:>7.12f}".format(i, losses[i]))
 
     if i in inds_of_sims_to_show:
-        print("Plotting...")
+        
+        print("Plotting...##########")
         utils.plot_grid(dataset[i].pos.cpu().detach().numpy())
         plt.figure(0)
         utils.plot_fields(
@@ -123,7 +130,7 @@ for i, dp in enumerate(loader):
                 "y_pd": y_pd.cpu().detach().numpy(),
                 "y_gt": dp.y.numpy(),
             },
-            save_path="./tmp_figs/",
+            save_path="./state_daily_norm_tmp_fig/",
             delay=0.0001,
         )
         plt.show()
@@ -137,12 +144,12 @@ comp_dict = {}
 comp_dict_upd = {
     # 'coords_true': dataset[2].pos.numpy(), 
     # 'fields_true': dataset[2].y.numpy(),
-    'coords_t_11': dataset[2].pos.numpy(),
+    'coords_t_11': dataset[0].pos.numpy(),
     'fields_t_11': y_pd.cpu().detach().numpy(),
     
 }
 comp_dict.update(comp_dict_upd)
-np.save("./paper_exps/comp_dict_paper_diff_step_size.npy", comp_dict)
+np.save("./state_daily_norm_tmp_1.npy", comp_dict)
 print(comp_dict.keys())
 
 print("Plotting diffs...")
